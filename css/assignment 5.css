@@ -1,0 +1,576 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: Calibri;
+}
+/*staaaaart Naaaaaavbaaaaaaaaaaaar*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 0px;
+    background-color: #181818;
+    z-index: 3;
+}
+/*naaaaaaaaaav taaaaaaabs is necessary to make active class*/
+.nav-tabs {
+    border-bottom: 0px;
+}
+.navbar-expand-lg .nav-tabs .nav-link {
+    color: #fff;
+    padding: 25px 20px 23px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius:0px;
+
+}
+/*foooooooooooooooooor active and hooooover*/
+.nav-tabs .nav-link.active{
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #ec3237!important;
+    border-bottom: 3px solid #ec3237;
+}
+.navbar-dark .nav-item:hover .nav-link{
+    color: #ec3237;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0px ;
+    padding-bottom: 0px;
+    line-height: 0px;
+}
+.navbar-brand img{
+    height: 70px;
+}
+.navbar-brand span{
+    position: relative;
+    bottom: 29px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 1em;
+}
+.navbar-nav .nav-item {
+    padding-left: 5px;
+}
+/*End Naaavbaaaar*/
+
+/*staaaaaaaart image overlaaaaay*/
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    background: linear-gradient( rgba(236,50,55,0.7) 90%, rgba(236,50,55,0.6))!important;
+    border: 0px;
+}
+.cover{
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+}
+.cover-text{
+    margin-top: 15%;
+    width: 80%;
+}
+.cover-text h1{
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: -2px 5px 5px #af2424;
+}
+.cover-text p{
+    padding-top: 20px;
+    font-size: 2em;
+}
+.know-button{
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0);
+    border: 2px solid #fff;
+    border-radius: 1px;
+    font-size: 17px;
+    padding: 9px 22px;
+}
+.know-button:hover{
+    color: #ec3237;
+    background-color: rgba(255,255,255,1);
+}
+.down-arrow{
+    position: absolute;
+    color: #fff;
+    left: 47%;
+    bottom: 40px;
+    transition: all 0.5s ease-in-out;
+    -webkit-animation: down 1s infinite linear;
+    -moz-animation: down 1s infinite linear;
+    animation: down 1s infinite linear;
+    animation-direction: alternate;
+}
+.down-arrow a{
+    color: #fff;
+}
+@keyframes down{
+    0%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
+@-webkit-keyframes down{
+    0%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
+@-moz-keyframes down{
+    0%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
+/*End Hoooooome Section */
+.about-sec{
+
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 1.5;
+}
+.sec-title h1{
+    color: #444;
+    font-size: 2.4em;
+    font-weight: bold;
+}
+.sec-title h4{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #888;
+}
+.profile-data{
+    padding-top: 50px;
+}
+.profile-data img{
+    max-width: 100%;
+}
+.profile-data h2{
+    color: #444;
+    font-size: 2.1em;
+    font-weight: 700;
+}
+.profile-data h3{
+    padding-bottom: 5px;
+    color: #444;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.profile-data p{
+    font-size: 18px;
+    color: #777;
+}
+.profile-data ul li{
+    display: inline-block;
+}
+.profile-icon-div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #888;
+    background-color: #fff;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+
+}
+.profile-icon-div a{
+    color: #888;
+    transition: all 0.2s ease-in-out;
+}
+.profile-icon-div:hover{
+    border-color: #EC3237;
+    background-color: #EC3237;
+}
+.profile-icon-div:hover a{
+    color: #fff;
+}
+/*Start Skill Seeeeection*/
+.skill-sec{
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    line-height: 1.5;
+}
+.skill-sec h1{
+    font-size: 2.2em;
+    color: #444;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+.skill-sec p{
+    font-size: 19px;
+    color: #888;
+}
+.skill-value h4{
+    color: #888;
+    float: left;
+}
+.skill-value h5{
+    color: #888;
+    float: right;
+}
+.skill-value{
+    padding-top: 0px;
+    display: block;  
+    padding-bottom: 10px;
+    width: 100%;
+}
+.skills{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.progress-bar {
+    background-color: #EC3237;
+    transition: width .6s ease;
+}
+.skill-button{
+    border-radius: 1px;
+    margin-top: 20px;
+    background-color: #EC3237;
+    font-size: 17px;
+    color: #fff;
+    padding: 8px 25px;
+    transition: all 0.15s ease-in-out;
+}
+.skill-button:hover{
+    background-color: #af2424;
+    color: #eee;
+}
+/*whaaaaaaat i dooooo section*/
+.work-sec{
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: #F5F5F5;
+}
+.work-sec h1{
+    font-size: 2.2em;
+    color: #444;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+.work-sec p{
+    font-size: 20px;
+    color: #888;
+}
+.work-inner{
+    margin-top: 70px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.work-inner .work-inner-data{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #ccc;
+    transition: all 0.2s ease-in-out;
+}
+.work-inner .work-inner-data h2{
+    color: #555;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.work-inner-data .work-icon{
+    border-radius: 2px;
+    width: 40px;
+    height: 40px;
+    background-color: #F5F5F5;
+    transition: all 0.2s ease-in-out;
+}
+.work-inner .work-inner-data:hover .work-icon{
+    background-color: #EC3237;
+    color: #fff;
+}
+.work-inner-data:hover.work-inner-data h2{
+    color: #EC3237;
+}
+.work-button{
+    border-radius: 1px;
+    background-color: #EC3237;
+    font-size: 17px;
+    letter-spacing: 0.7px;
+    color: #fff;
+    padding: 9px 26px;
+}
+.work-button:hover{
+    background-color: #af2424;
+    color: #eee;
+}
+/*staaaaaaaaaaart work secoooond part*/
+.work-second-part{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url(../img/work.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.work-second-part .second-part-inner{
+    padding: 35px 30px;
+    background-color: transparent;
+    color: #EC3237;
+    border: 1px solid #444;
+}
+.work-second-part .second-part-inner h1{
+    padding-top: 25px;
+    padding-bottom: 17px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+.work-second-part .second-part-inner h2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+/*poooooortfolio Section*/
+.portfolio-sec{
+    background-color: #F5F5F5;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    line-height: 1.5;
+}
+.portfolio-sec h1{
+    font-size: 2.2em;
+    color: #444;
+    font-weight: bolder;
+}
+.portfolio-sec p{
+    font-size: 19px;
+    color: #888;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.portfolio-nav{
+   margin-top: 50px;
+
+}
+.portfolio-nav .nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    margin-right: 4px;
+    padding: 9px 21px;
+    transition: all 0.1s ease-in-out;
+}
+.portfolio-nav .nav-link:hover {
+    border: 2px solid #EC3237 ;
+    color: #EC3237;
+}
+.portfolio-nav .nav-link.active {
+    color: #fff;
+    background-color: #EC3237;
+    border-color: #EC3237;
+}
+.portfolio-inner{
+    background-color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 2px #ddd;
+}
+.portfolio-inner img{
+    width: 100%;
+}
+.portfolio-inner .icon-div{
+    position: relative;
+    bottom: 20px;
+    left: 45%;
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.12s ease-in-out;
+}
+.portfolio-inner h2{
+    font-size: 1.4em;
+    color: #555;
+    font-weight: 600;
+    padding-top: 0px;
+}
+.portfolio-inner:hover .icon-div{
+    background-color: #EC3237;
+}
+.portfolio-button{
+    border-radius: 1px;
+    background-color: #EC3237;
+    font-size: 17px;
+    color: #fff;
+    padding: 9px 29px;
+    transition: all 0.15s ease-in-out;
+}
+.portfolio-button:hover{
+    background-color: #af2424;
+    color: #eee;
+}
+.feedback-sec{
+    background: url(../img/client-testimonial.jpg);
+    background-attachment: fixed;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #fff;
+}
+.carousel-inner{
+    margin-right: 45px;
+    margin-left: 45px;
+    width: 50%;
+    line-height: 1.2;
+}
+.carousel-inner img{
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 5px solid #EC3237;
+    }
+.carousel-inner h1{
+    padding-top: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #EC3237;
+}
+.carousel-inner p{
+    padding-top: 15px;
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 500;
+}
+.hire-sec{
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    line-height: 1.5;
+}
+.hire-sec h1{
+    font-size: 2.6em;
+    color: #444;
+    font-weight: bolder;
+}
+.hire-sec h2{
+    font-size: 1.3em;
+    color: #444;
+    font-weight: 700;
+}
+.hire-sec p{
+    font-size: 19px;
+    color: #888;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.contact-mail{
+    color: #EC3237;
+}
+.contact-mail:hover{
+    text-decoration: none;
+    color: #af2424;
+}
+.contact-info ul li{
+    display: inline-block;
+}
+.contact-icon-div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #888;
+    background-color: #fff;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+
+}
+.contact-icon-div a{
+    color: #888;
+    transition: all 0.1s ease-in-out;
+}
+.contact-icon-div:hover{
+    border-color: #EC3237;
+    background-color: #EC3237;
+}
+.contact-icon-div:hover a{
+    color: #fff;
+}
+/*staaaaaaaaaart fooooooorm*/
+.form-control{
+    height: 45px;
+    font-size: 1.2em;
+    color: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 1px;
+}
+/*preeeeeeefiiiiix*/
+.form-control::-webkit-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.form-control::-moz-input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.form-control::input-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #444;
+  outline: 0;
+  box-shadow: 0px 0px 0px;
+}
+.contact-button{
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #EC3237;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    font-size: 17px;
+    padding: 9px 22px;
+    transition: all 0.1 ease-in-out;
+}
+.contact-button:hover{
+    color: #eee;
+    background-color:#af2424;
+}
+.contact-hr{
+    color: #eee;
+}
+.footer-div{
+    background-color: #fff;
+    color: #eee;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.footer-div p{
+    color: #ccc;
+    font-size: 17px;
+}
+.footer-div p a{
+    color: #EC3237;
+    transition: all 0.1 ease-in-out;
+}
+.footer-div p a:hover{
+    text-decoration: none;
+}
