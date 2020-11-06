@@ -1,3 +1,19 @@
+html{
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  *::-webkit-scrollbar-track {
+    background: #181818;
+    border-radius: 10px; 
+    opacity: 0.5;
+}
+  *::-webkit-scrollbar-thumb {
+    background-color: #EC3237;
+    border-radius: 20px;
+    border: 2px solid #181818;
+}
 *{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -7,6 +23,9 @@
 body{
     position: relative;
     font-family: Calibri;
+}
+*{
+    transition: .15s ease-in-out;
 }
 /*staaaaart Naaaaaavbaaaaaaaaaaaar*/
 .navbar {
@@ -189,12 +208,13 @@ body{
     border: 1px solid #888;
     background-color: #fff;
     padding: 10px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
 }
 .profile-icon-div a{
     color: #888;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .profile-icon-div:hover{
     border-color: #EC3237;
@@ -240,8 +260,108 @@ body{
 }
 .progress-bar {
     background-color: #EC3237;
-    transition: width .6s ease;
 }
+.progress1{
+    transition: ease-in-out;
+    animation-name: prog-animate1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes prog-animate1{
+    0% {
+        width: 0%;
+    }
+    25%
+    {
+        width: 20%;
+    }
+    50% {
+        width: 40%;
+    }
+    75% {
+        width: 60%;
+    }
+    100%{
+        width: 79%;
+    }
+}
+.progress2{
+    transition: ease-in-out;
+    animation-name: prog-animate2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes prog-animate2{
+    0% {
+        width: 0%;
+    }
+    25%
+    {
+        width: 20%;
+    }
+    50% {
+        width: 40%;
+    }
+    75% {
+        width: 70%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+.progress3{
+    transition: ease-in-out;
+    animation-name: prog-animate3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes prog-animate3{
+    0% {
+        width: 0%;
+    }
+    25%
+    {
+        width: 20%;
+    }
+    50% {
+        width: 40%;
+    }
+    75% {
+        width: 70%;
+    }
+    100%{
+        width: 96%;
+    }
+}
+.progress4{
+    transition: ease-in-out;
+    animation-name: prog-animate4;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes prog-animate4{
+    0% {
+        width: 0%;
+    }
+    25%
+    {
+        width: 20%;
+    }
+    50% {
+        width: 40%;
+    }
+    75% {
+        width: 50%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
 .skill-button{
     border-radius: 1px;
     margin-top: 20px;
@@ -279,12 +399,18 @@ body{
 }
 
 .work-inner .work-inner-data{
+    cursor: pointer;
     padding: 25px;
     margin-bottom: 30px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 2px 5px #ccc;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.work-inner-data:hover{
+    transition: 0.3s;
+    transform: translateY(-3px);
+    transition: all 0.3s ;
 }
 .work-inner .work-inner-data h2{
     color: #555;
@@ -292,14 +418,12 @@ body{
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: all 0.2s ease-in-out;
 }
 .work-inner-data .work-icon{
     border-radius: 2px;
     width: 40px;
     height: 40px;
     background-color: #F5F5F5;
-    transition: all 0.2s ease-in-out;
 }
 .work-inner .work-inner-data:hover .work-icon{
     background-color: #EC3237;
@@ -387,6 +511,7 @@ body{
     border-color: #EC3237;
 }
 .portfolio-inner{
+    cursor: pointer;
     background-color: #fff;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -436,10 +561,12 @@ body{
     padding-left: 40px;
     color: #fff;
 }
+.slider-nav{
+    width: 90%;
+}
 .carousel-inner{
-    margin-right: 45px;
-    margin-left: 45px;
-    width: 50%;
+    /* padding: 0px 2.5%; */
+    width: 45%;
     line-height: 1.2;
 }
 .carousel-inner img{
@@ -574,3 +701,16 @@ body{
 .footer-div p a:hover{
     text-decoration: none;
 }
+@media only screen and (max-width: 768px) {
+
+    .slider-nav{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    /* .carousel-inner{
+        padding: 0px !important;
+        width: 100% !important;
+        margin: 0px !important;
+    } */
+  }
