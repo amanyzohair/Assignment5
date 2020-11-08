@@ -10,7 +10,7 @@ html{
     opacity: 0.5;
 }
   *::-webkit-scrollbar-thumb {
-    background-color: #EC3237;
+    background-color: #ac24ce;
     border-radius: 20px;
     border: 2px solid #181818;
 }
@@ -27,11 +27,26 @@ body{
 *{
     transition: .15s ease-in-out;
 }
+.cover{
+    background-image: linear-gradient(-45deg, rgba(163,29,196,0.35), rgba(101,127,255,0.35)), url(../img/cover.jpg);
+    background-image: -moz-linear-gradient(-45deg, rgba(163,29,196,0.35), rgba(101,127,255,0.35)), url(../img/cover.jpg);
+    background-image: -webkit-linear-gradient(-45deg, rgba(163,29,196,0.35), rgba(101,127,255,0.35)), url(../img/cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
 /*staaaaart Naaaaaavbaaaaaaaaaaaar*/
 .navbar {
-    position: fixed;
     width: 100%;
-    padding: 0px;
+    background-color: transparent;
+    z-index: 3;
+}
+.scrolled {
+    padding: 5px 0px;
+    width: 100%;
     background-color: #181818;
     z-index: 3;
 }
@@ -41,92 +56,55 @@ body{
 }
 .navbar-expand-lg .nav-tabs .nav-link {
     color: #fff;
-    padding: 25px 20px 23px 20px;
     text-transform: uppercase;
     font-weight: bold;
     border: 2px solid transparent;
     border-radius:0px;
-
 }
 /*foooooooooooooooooor active and hooooover*/
-.nav-tabs .nav-link.active{
+.navbar .nav-item .active.nav-link{
     background-color: transparent;
-    border: 2px solid transparent;
-    color: #ec3237!important;
-    border-bottom: 3px solid #ec3237;
-}
-.navbar-dark .nav-item:hover .nav-link{
-    color: #ec3237;
-}
-.navbar-brand {
-    display: inline-block;
-    padding-top: 0px ;
-    padding-bottom: 0px;
-    line-height: 0px;
-}
-.navbar-brand img{
-    height: 70px;
+    color: #181818;
 }
 .navbar-brand span{
-    position: relative;
-    bottom: 29px;
-    left: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+}
+.navbar-brand span{
     font-weight: bold;
     font-size: 1em;
-}
-.navbar-nav .nav-item {
-    padding-left: 5px;
 }
 /*End Naaavbaaaar*/
 
 /*staaaaaaaart image overlaaaaay*/
-.overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1.25rem;
-    background: linear-gradient( rgba(236,50,55,0.7) 90%, rgba(236,50,55,0.6))!important;
-    border: 0px;
-}
-.cover{
-    position: relative;
-    height: 650px;
-    overflow: hidden;
-}
-.cover-text{
-    margin-top: 15%;
-    width: 80%;
-}
 .cover-text h1{
     font-size: 4em;
+    color: #ddd;
     font-weight: bold;
-    text-shadow: -2px 5px 5px #af2424;
+    text-shadow: -2px 5px 5px #A31DC4;
 }
 .cover-text p{
-    padding-top: 20px;
     font-size: 2em;
+    color: #ddd !important;
 }
 .know-button{
     margin-top: 20px;
     color: #fff;
     text-transform: uppercase;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255,255,255,0.2);
     border: 2px solid #fff;
     border-radius: 1px;
     font-size: 17px;
-    padding: 9px 22px;
+    transition: all 0.3s ease-in-out;
+
 }
 .know-button:hover{
-    color: #ec3237;
+    color: #5E1171;
     background-color: rgba(255,255,255,1);
 }
 .down-arrow{
-    position: absolute;
     color: #fff;
-    left: 47%;
-    bottom: 40px;
     transition: all 0.5s ease-in-out;
     -webkit-animation: down 1s infinite linear;
     -moz-animation: down 1s infinite linear;
@@ -138,35 +116,33 @@ body{
 }
 @keyframes down{
     0%{
-        bottom: 40px;
+        transform: translateY(0px);
     }
     100%{
-        bottom: 20px;
+        transform: translateY(-20px);
     }
 }
 @-webkit-keyframes down{
     0%{
-        bottom: 40px;
+        transform: translateY(0px);
     }
     100%{
-        bottom: 20px;
+        transform: translateY(-20px);
     }
 }
 @-moz-keyframes down{
     0%{
-        bottom: 40px;
+        transform: translateY(0px);
     }
     100%{
-        bottom: 20px;
+        transform: translateY(-20px);
     }
 }
 /*End Hoooooome Section */
 .about-sec{
-
     background-color: #fff;
-    padding-top: 60px;
-    padding-bottom: 60px;
     line-height: 1.5;
+    overflow: hidden;
 }
 .sec-title h1{
     color: #444;
@@ -174,54 +150,71 @@ body{
     font-weight: bold;
 }
 .sec-title h4{
-    padding-top: 15px;
-    padding-bottom: 10px;
     color: #888;
 }
+.profile{
+    overflow-x: hidden;
+}
+.profile-img{
+    overflow: hidden;
+}
 .profile-data{
-    padding-top: 50px;
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 5px solid #5E1171;
 }
 .profile-data img{
-    max-width: 100%;
+    transform: translate(4.5%, 3.5%);
+    box-shadow: -2px -2px 5px #A31DC4;
 }
-.profile-data h2{
+.header{
+    position: relative;
     color: #444;
     font-size: 2.1em;
     font-weight: 700;
 }
-.profile-data h3{
-    padding-bottom: 5px;
+.header:before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 75%;
+    background-color: #5E1171;
+    border-radius: 5px;
+    left: 0px;
+    right: 0px;
+    top: 10%;
+    bottom: 0px;
+}
+.profile h3{
     color: #444;
     font-size: 1.4em;
     font-weight: bold;
 }
-.profile-data p{
+.profile p{
     font-size: 18px;
     color: #777;
 }
-.profile-data ul li{
-    display: inline-block;
+.profile-col{
+    overflow-x: hidden;
 }
-.profile-icon-div{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #888;
-    background-color: #fff;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
+.profile-col ul li{
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
-
 }
-.profile-icon-div a{
-    color: #888;
-    transition: all 0.3s ease-in-out;
+.profile-icon{
+    color: #555;
 }
-.profile-icon-div:hover{
-    border-color: #EC3237;
-    background-color: #EC3237;
+.profile-col ul li:hover .profile-icon{
+    color: #5E1171;
+    text-decoration: none;
 }
-.profile-icon-div:hover a{
-    color: #fff;
+.contact-info ul li{
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+.contact-info ul li:hover .profile-icon{
+    color: #5E1171;
+    text-decoration: none;
 }
 /*Start Skill Seeeeection*/
 .skill-sec{
@@ -259,7 +252,7 @@ body{
     padding-bottom: 15px;
 }
 .progress-bar {
-    background-color: #EC3237;
+    background-color: #5E1171;
 }
 .progress1{
     transition: ease-in-out;
@@ -362,17 +355,15 @@ body{
     }
 }
 
-.skill-button{
+.skill-button, .work-button, .portfolio-button, .contact-button{
     border-radius: 1px;
-    margin-top: 20px;
-    background-color: #EC3237;
+    background-color: rgba(94,17,113, 0.8);
     font-size: 17px;
     color: #fff;
-    padding: 8px 25px;
     transition: all 0.15s ease-in-out;
 }
-.skill-button:hover{
-    background-color: #af2424;
+.skill-button:hover , .work-button:hover, .portfolio-button:hover, .contact-button:hover{
+    background-color: rgb(94,17,113);
     color: #eee;
 }
 /*whaaaaaaat i dooooo section*/
@@ -383,7 +374,7 @@ body{
 }
 .work-sec h1{
     font-size: 2.2em;
-    color: #444;
+    color: rgb(94,17,113);
     font-weight: bolder;
     padding-bottom: 10px;
 }
@@ -397,7 +388,6 @@ body{
     text-align: left;
     line-height: 1.6;
 }
-
 .work-inner .work-inner-data{
     cursor: pointer;
     padding: 25px;
@@ -408,12 +398,12 @@ body{
     transition: all 0.3s ease-in-out;
 }
 .work-inner-data:hover{
-    transition: 0.3s;
     transform: translateY(-3px);
     transition: all 0.3s ;
+    box-shadow: -2px 2px 5px #A31DC4;
 }
 .work-inner .work-inner-data h2{
-    color: #555;
+    color: #5E1171;
     font-size: 1.3em;
     font-weight: bold;
     padding-top: 10px;
@@ -426,24 +416,13 @@ body{
     background-color: #F5F5F5;
 }
 .work-inner .work-inner-data:hover .work-icon{
-    background-color: #EC3237;
+    background-color: #5E1171;
     color: #fff;
 }
 .work-inner-data:hover.work-inner-data h2{
-    color: #EC3237;
+    color: #181818;
 }
-.work-button{
-    border-radius: 1px;
-    background-color: #EC3237;
-    font-size: 17px;
-    letter-spacing: 0.7px;
-    color: #fff;
-    padding: 9px 26px;
-}
-.work-button:hover{
-    background-color: #af2424;
-    color: #eee;
-}
+
 /*staaaaaaaaaaart work secoooond part*/
 .work-second-part{
     padding-top: 80px;
@@ -455,7 +434,7 @@ body{
 .work-second-part .second-part-inner{
     padding: 35px 30px;
     background-color: transparent;
-    color: #EC3237;
+    color: #5E1171;
     border: 1px solid #444;
 }
 .work-second-part .second-part-inner h1{
@@ -502,56 +481,35 @@ body{
     transition: all 0.1s ease-in-out;
 }
 .portfolio-nav .nav-link:hover {
-    border: 2px solid #EC3237 ;
-    color: #EC3237;
+    border: 2px solid #5E1171 ;
+    color: #5E1171;
 }
 .portfolio-nav .nav-link.active {
     color: #fff;
-    background-color: #EC3237;
-    border-color: #EC3237;
+    background-color: #5E1171;
+    border-color: #5E1171;
 }
-.portfolio-inner{
+.card{
+    overflow: hidden;
     cursor: pointer;
-    background-color: #fff;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 2px #ddd;
 }
-.portfolio-inner img{
-    width: 100%;
+.card-img-overlay {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    background-color: rgba(94,17,113,0.3);
+    transform: translateY(100%);
 }
-.portfolio-inner .icon-div{
-    position: relative;
-    bottom: 20px;
-    left: 45%;
-    width: 35px;
-    height: 35px;
-    background-color: #000;
-    border-radius: 50%;
-    color: #fff;
-    transition: all 0.12s ease-in-out;
+.card-img-overlay h2{
+    font-weight: bold;
 }
-.portfolio-inner h2{
-    font-size: 1.4em;
-    color: #555;
-    font-weight: 600;
-    padding-top: 0px;
+.card-img-overlay h1, .card-img-overlay i{
+    color: #ddd;
 }
-.portfolio-inner:hover .icon-div{
-    background-color: #EC3237;
+.card:hover .card-img-overlay{
+    opacity: 1;
+    transform: translateY(0);
 }
-.portfolio-button{
-    border-radius: 1px;
-    background-color: #EC3237;
-    font-size: 17px;
-    color: #fff;
-    padding: 9px 29px;
-    transition: all 0.15s ease-in-out;
-}
-.portfolio-button:hover{
-    background-color: #af2424;
-    color: #eee;
-}
+
 .feedback-sec{
     background: url(../img/client-testimonial.jpg);
     background-attachment: fixed;
@@ -573,13 +531,13 @@ body{
     width: 100px;
     margin: 10px auto;
     border-radius: 50%;
-    border: 5px solid #EC3237;
+    border: 5px solid #5E1171;
     }
 .carousel-inner h1{
     padding-top: 15px;
     font-size: 1.8em;
     font-weight: bold;
-    color: #EC3237;
+    color: #5E1171;
 }
 .carousel-inner p{
     padding-top: 15px;
@@ -610,7 +568,7 @@ body{
     padding-bottom: 10px;
 }
 .contact-mail{
-    color: #EC3237;
+    color: #5E1171;
 }
 .contact-mail:hover{
     text-decoration: none;
@@ -633,8 +591,8 @@ body{
     transition: all 0.1s ease-in-out;
 }
 .contact-icon-div:hover{
-    border-color: #EC3237;
-    background-color: #EC3237;
+    border-color: #5E1171;
+    background-color: #5E1171;
 }
 .contact-icon-div:hover a{
     color: #fff;
@@ -667,20 +625,7 @@ body{
   outline: 0;
   box-shadow: 0px 0px 0px;
 }
-.contact-button{
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #EC3237;
-    border: 2px solid #fff;
-    border-radius: 2px;
-    font-size: 17px;
-    padding: 9px 22px;
-    transition: all 0.1 ease-in-out;
-}
-.contact-button:hover{
-    color: #eee;
-    background-color:#af2424;
-}
+
 .contact-hr{
     color: #eee;
 }
@@ -695,22 +640,40 @@ body{
     font-size: 17px;
 }
 .footer-div p a{
-    color: #EC3237;
+    color: #5E1171;
     transition: all 0.1 ease-in-out;
 }
 .footer-div p a:hover{
     text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
-
+    .profile-col{
+        padding: 0px 5% !important;
+        overflow-x: hidden;
+    }
     .slider-nav{
         display: none;
         visibility: hidden;
         opacity: 0;
+    }
+    .cover-text h1{
+        font-size: 2em;
+    }
+    .cover-text p{
+        font-size: 1em;
     }
     /* .carousel-inner{
         padding: 0px !important;
         width: 100% !important;
         margin: 0px !important;
     } */
+  }
+  @media only screen and (max-width: 768px) {
+    .profile-data img{
+        transform: translate(0, 0);
+        box-shadow: -2px -2px 5px #A31DC4;
+    }
+    .profile-data{
+        border: 0px;
+    }
   }

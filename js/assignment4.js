@@ -15,26 +15,58 @@ $('.counter').each(function(){
         }
     }
     )
-})
+});
 
-// const counters = document.querySelectorAll('.counter');
-// const speed = 400 ; //the lower the slower
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 200) {
+          $(".navbar").css("background" , "#5E1171");
+        }
+  
+        else{
+            $(".navbar").css("background" , "transparent");
 
-// counters.forEach(counter => {
-//     const updateCount = () =>{
-//         const target = +counter.getAttribute('data-target');
-//         const count = +counter.innerText;
+        }
+    })
+  });
 
-//         const inc = target / speed ;
-//         // check if target is reached
-//         if(count < target){
-//             counter.innerText = count + inc
+//   $(document).ready(function () {
+//     $(document).on("scroll", onScroll);
+    
+//     //smoothscroll
+//     $('a[href^="#"]').on('click', function (e) {
+//         e.preventDefault();
+//         $(document).off("scroll");
+        
+//         $('.navbar-link').each(function () {
+//             $(this).removeClass('active');
+//         })
+//         $(this).addClass('active');
+      
+//         var target = this.hash,
+//             menu = target;
+//         $target = $(target);
+//         $('html, body').stop().animate({
+//             'scrollTop': $target.offset().top+2
+//         }, 500, 'swing', function () {
+//             window.location.hash = target;
+//             $(document).on("scroll", onScroll);
+//         });
+//     });
+// });
 
-//             //call function every ms
-//             setTimeout(updateCount, 1);
-//         }else{
-//             countr.innerText = target
+// function onScroll(event){
+//     var scrollPos = $(document).scrollTop();
+//     $('.navbar .nav-item .nav-link').each(function () {
+//         var currLink = $(this);
+//         var refElement = $(currLink.attr("href"));
+//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+//             $('.navbar .nav-item .nav-link').removeClass("active");
+//             currLink.addClass("active");
 //         }
-//     };
-//     updateCount();
-// })
+//         else{
+//             currLink.removeClass("active");
+//         }
+//     });
+// }
