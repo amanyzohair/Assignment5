@@ -646,6 +646,12 @@ body{
 .footer-div p a:hover{
     text-decoration: none;
 }
+@media (max-width: 991px){
+    .navbar {
+        background-color: #5E1171 !important;
+        z-index: 3;
+    }
+}
 @media only screen and (max-width: 768px) {
     .profile-col{
         padding: 0px 5% !important;

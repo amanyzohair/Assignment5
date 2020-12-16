@@ -17,19 +17,27 @@ $('.counter').each(function(){
     )
 });
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 200) {
-          $(".navbar").css("background" , "#5E1171");
-        }
+// $(document).ready(function(){
+//     $(window).scroll(function(){
+//         var scroll = $(window).scrollTop();
+//         if (scroll > 200) {
+//           $(".navbar").css("background" , "#5E1171");
+//         }
   
-        else{
-            $(".navbar").css("background" , "transparent");
+//         else{
+//             $(".navbar").css("background" , "transparent");
 
-        }
-    })
-  });
+//         }
+//     })
+//   });
+window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("nav").style.background = "#5E1171";
+    } else {
+      document.getElementById("nav").style.background = "transparent";
+    }
+  };
 
 //   $(document).ready(function () {
 //     $(document).on("scroll", onScroll);
